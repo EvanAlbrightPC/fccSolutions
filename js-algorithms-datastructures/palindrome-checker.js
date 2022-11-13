@@ -32,15 +32,15 @@ const strArr = [
 
 // accepts a string as an argument and passes it to the previous palindrome function
 function isPalindrome1(strArr) { 
-    let message = '';
+    let newArr = [];
     for (let i = 0; i < strArr.length; i++) {
         if (palindrome(strArr[i])) {
-            message += `"${strArr[i]}" is a palindrome.` // if palindrome is truthy then we return a message saying such
+            newArr.push(`"${strArr[i]}" is a palindrome.`) // if palindrome is truthy we push the new string to newArr
         } else {
-            message += `"${strArr[i]}" is not a palindrome.` // otherwise a different message is returned
+            newArr.push(`"${strArr[i]}" is not a palindrome.`) // otherwise a different message is pushed
         }
-        message += '\n';
     }
+    let message = newArr.join('\n'); //create a string from the array joined by newlines
     return message;
 }
 
