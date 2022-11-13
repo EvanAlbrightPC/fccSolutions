@@ -31,7 +31,7 @@ const strArr = [
 ]
 
 // accepts a string as an argument and passes it to the previous palindrome function
-function isPalindrome1(strArr) { 
+function isPalindrome(strArr) { 
     let newArr = [];
     for (let i = 0; i < strArr.length; i++) {
         if (palindrome(strArr[i])) {
@@ -45,4 +45,4 @@ function isPalindrome1(strArr) {
 }
 
 // finally calls isPalindrome to see results on the provided array
-console.log(isPalindrome1(strArr))
+console.log(isPalindrome(strArr))
