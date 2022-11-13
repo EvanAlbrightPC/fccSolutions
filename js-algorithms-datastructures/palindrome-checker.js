@@ -14,26 +14,35 @@ function palindrome(str) {
     return true; // once low == high we've reached the middle of the string and know it is a palindrome based on the previous comparison
 }
 
+// array with strings of whatever characters you want
+const strArr = [ 
+    'eye',
+    '_eye',
+    'race car',
+    'not a palindrome',
+    'A man, a plan, a canal. Panama',
+    'never odd or even',
+    'nope',
+    'almostomla',
+    'My age is 0, 0 si ega ym.',
+    '1 eye for of 1 eye.',
+    '0_0 (: /-\\ :) 0-0',
+    'five|\\_/|four',
+]
+
 // accepts a string as an argument and passes it to the previous palindrome function
-function isPalindrome(str) { 
+function isPalindrome1(strArr) { 
     let message = '';
-    if (palindrome(str)) { 
-        message += `"${str}" is a palindrome.` // if palindrome is truthy then we return a message saying such
-    } else {
-        message += `"${str}" is not a palindrome.` // otherwise a different message is returned
+    for (let i = 0; i < strArr.length; i++) {
+        if (palindrome(strArr[i])) {
+            message += `"${strArr[i]}" is a palindrome.` // if palindrome is truthy then we return a message saying such
+        } else {
+            message += `"${strArr[i]}" is not a palindrome.` // otherwise a different message is returned
+        }
+        message += '\n';
     }
     return message;
 }
 
-console.log(isPalindrome('eye'))
-console.log(isPalindrome('_eye'))
-console.log(isPalindrome('race car'))
-console.log(isPalindrome('not a palindrome'))
-console.log(isPalindrome('A man, a plan, a canal. Panama'))
-console.log(isPalindrome('never odd or even'))
-console.log(isPalindrome('nope'))
-console.log(isPalindrome('almostomla'))
-console.log(isPalindrome('My age is 0, 0 si ega ym.'))
-console.log(isPalindrome('1 eye for of 1 eye.'))
-console.log(isPalindrome('0_0 (: /-\\ :) 0-0'))
-console.log(isPalindrome('five|\_/|four'))
+// finally calls isPalindrome to see results on the provided array
+console.log(isPalindrome1(strArr))
