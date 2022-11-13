@@ -1,3 +1,3 @@
 # fccSolutions
 
-Repo for solutions to evaluations on freeCodeCamp.org
+Repo for freeCodeCamp.org solutions
