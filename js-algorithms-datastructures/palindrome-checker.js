@@ -46,3 +46,18 @@ function isPalindrome(strArr) {
 
 // finally calls isPalindrome to see results on the provided array
 console.log(isPalindrome(strArr))
+
+// Expected Output:
+
+// "eye" is a palindrome.
+// "_eye" is a palindrome.
+// "race car" is a palindrome.
+// "not a palindrome" is not a palindrome.
+// "A man, a plan, a canal. Panama" is a palindrome.
+// "never odd or even" is a palindrome.
+// "nope" is not a palindrome.
+// "almostomla" is not a palindrome.
+// "My age is 0, 0 si ega ym." is a palindrome.
+// "1 eye for of 1 eye." is not a palindrome.
+// "0_0 (: /-\ :) 0-0" is a palindrome.
+// "five|\_/|four" is not a palindrome.
